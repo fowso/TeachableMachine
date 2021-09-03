@@ -1,0 +1,63 @@
+@charset "utf=8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* index.html */
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html, button, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 영상 배경 스타일 */
+
+.video-background{
+  background: black;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground
+.video-background iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.cont-main, .cont {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+}
+
+.tit { 
+  font-weight: 900;
+  font-size:  30px;
+  line-height: 228px;
+  color: #f2994a;
+  margin-bottom: 30px;
+}
+
+.cont-main .img-slide.img-slide-item {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50) translateY(-50%);
+  width: 300px;
+  height: 300px;
+}
+
+.cont-main .img-slide .img-slide-item.active{
+  display: inline-block;
+
+}
